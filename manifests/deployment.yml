@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ashwinsivarundevops 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ashwinsivarundevops
+  template:
+    metadata:
+      labels:
+        app: ashwinsivarundevops 
+    spec:
+      containers:
+        - name: ashwinsivarundevops 
+          image: abx13.azurecr.io/ashwinsivarundevops
+          ports:
+          - containerPort: 80
